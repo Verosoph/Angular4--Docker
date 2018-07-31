@@ -27,7 +27,7 @@ Some information: if the docker container works fine but the startpage witth loc
 teke a look into the package.json. In this file under scripts, the start command needs the info the app is running on localhost.
 edit the part of this file like this
 
-´´´javascript
+```javascript
 {
   "name": "my-app",
   "version": "0.0.0",
@@ -35,4 +35,4 @@ edit the part of this file like this
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",         #that is the important one
 
-´´´
+```
