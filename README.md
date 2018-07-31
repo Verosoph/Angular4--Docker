@@ -34,5 +34,8 @@ edit the part of this file like this
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",         #that is the important one
+.
+.
+.
 
 ```
