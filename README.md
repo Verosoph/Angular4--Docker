@@ -1,27 +1,37 @@
-# MyApp
+# Angular Docker
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
 
-## Development server
+## How it works
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Clone the repo
+docker-compose up
 
-## Code scaffolding
+### or (better)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Create an Angular Projekt
+Copy the docker-compose.yml and the Dockerfile into the app folder
+edit the two files for your project
+and start with docker-compose up
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+https://scotch.io/tutorials/create-a-mean-app-with-angular-2-and-docker-compose
+https://mherman.org/blog/2018/02/26/dockerizing-an-angular-app/
+https://angular.io/
+
+
+## maybe important
+Some information: if the docker container works fine but the startpage witth localhost:4200 does not work,
+teke a look into the package.json. In this file under scripts, the start command needs the info the app is running on localhost.
+edit the part of this file like this
+
+´´´
+{
+  "name": "my-app",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --host 0.0.0.0",         #that is the important one
+´´´
